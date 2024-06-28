@@ -1,0 +1,145 @@
+@import '../../../scss/main.scss';
+
+.herobanner-main{
+    padding: 80px 0 120px;
+    @media (max-width:576px) {
+        padding: 30px 0 80px;
+    }
+}
+.herobanner-main-title{
+    h1{
+        color: var( --theme-black-text-color);
+        // color: red;
+        max-width: 530px;
+        margin: 0 0 24px;
+        @include font48;
+        span{
+            display: block;
+            color: var(--theme-grey-text-heading);
+        }
+    }
+    @media  (max-width:576px) {
+        h1{
+            @include font24;
+        }
+    }
+}
+.herobanner-main-text{
+    p{
+        max-width: 530px;
+        color: var(--theme-grey-text-paragraph);
+        margin: 0 0 32px;
+    }
+    @media (max-width:576px) {
+        p{
+            @include font14;
+        }
+    }
+}
+.herobanner-main-searchparent{
+    border: 1px solid var(--theme-black-border);
+    border-radius: 10px;
+    max-width: 670px;
+    .herobanner-main-search{
+        padding: 12px 24px;
+        display: flex;
+        .herobanner-main-search-consultants{
+            span{
+                display: flex;
+                gap: 5px;
+                color: var(--theme-black-text-color);
+                padding: 10px 20px 10px 10px;
+                border-right: 1px solid var(--theme-black-border);
+                @include font16;
+            }
+        }
+        .herobanner-main-search-searchbar{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 0 0 15px;
+            img{
+                max-width: 100%
+            }
+            input[type="text"]{
+                @include font16;
+                width: 300px;
+                color: var(--theme-black-text-grey-paragraph);
+                border: 0;
+                
+            }
+            button{
+                color: var(--theme-white-text-color);
+                background-color: var(--theme-blue-text-color);
+                @include font16;
+                font-weight: 600;
+                border: none;
+                border-radius: 8px;
+                padding: 11px 23px;
+                transition: .3s;
+            }
+            button:hover{
+                transform: scale(1.1);
+                background-color: rgb(59, 89, 59);
+                color: white;
+                border: none;
+            }
+        }
+    }
+    @media  (max-width:768px) {
+        .herobanner-main-search{
+            .herobanner-main-search-searchbar{
+                input[type="text"]{
+                    width: 200px;
+                }
+            }
+        }
+    }
+    @media (max-width:576px) {
+        .herobanner-main-search{
+            display: flex;
+            flex-direction: column;
+            .herobanner-main-search-consultants{
+                span{
+                    justify-content: space-between;
+                    border: none;
+                    padding-bottom: 20px;
+                }
+            }
+            .herobanner-main-search-searchbar{
+                display: flex;
+                justify-content: unset;
+                gap: 10px;
+                button{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.herobanner-templates-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 80px;
+    padding: 48px 0 0;
+    border-top:1px solid var(--theme-black-border) ;
+    @media (max-width:576px) {
+        grid-template-columns: 1fr;
+        padding: 20px 0 0 ;
+        gap: 30px;
+    }
+}
+.herobanner-templates-grid-item{
+    max-width: 325px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    p{
+        color: var(--theme-grey-text-heading);
+        @include font18;
+        span{
+            color: var(--theme-black-text-color);
+        }
+    }
+}

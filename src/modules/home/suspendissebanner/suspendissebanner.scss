@@ -1,0 +1,77 @@
+@import '../../../scss/main.scss';
+
+.suspendissebanner{
+    padding: 100px 0;
+    background-color: var(--theme-bg-light);
+}
+.suspendissebanner-flex{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @media (max-width:1024px) {
+        flex-direction: column;
+    }
+}
+.suspendissebanner-title{
+    max-width: 400px;
+    h5{
+        margin: 0 0 20px;
+        @include font32;
+        color: var(--theme-black-text-color);
+        span{
+            color: var(--theme-grey-text-heading);
+        }
+    }
+    p{
+        @include font16;
+        color: var(--theme-grey-text-paragraph);
+    }
+    @media (max-width:1024px) {
+        max-width: 100%;
+    }
+    @media  (max-width:768px) {
+        h5{
+            @include font28
+        }
+        p{
+            margin: 0;
+        }
+    }
+    @media (max-width:576px) {
+        text-align: left;
+        h5{
+            max-width: 300px;
+            @include font24;
+        }
+        p{
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+.suspendissebanner-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    @media (max-width:576px) {
+       
+        grid-template-columns: 1fr;
+        
+    }
+}
+.suspendissebanner-grid-item{
+    max-width: 212px;
+    h6{
+        @include font24;
+        color: var(--theme-black-text-color);
+        margin: 0 0 15px
+    }
+    p{
+        @include font16;
+        color: var(--theme-grey-text-paragraph);
+    }
+    @media (max-width:1024px) {
+        max-width: 100%;
+    }
+}

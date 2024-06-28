@@ -1,0 +1,81 @@
+@import '../../../scss/main.scss';
+
+.header {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+.header-nav {
+    color: var(--theme-black-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+
+    nav {
+        padding: 0 0 0 64px;
+
+        a {
+            margin: 0 0 0 48px;
+            color: var(--theme-black-text-color);
+            @include font15;
+            text-decoration: none;
+
+            img {
+                margin: 0 0 0 5px;
+            }
+
+        }
+        a:hover{
+            color: rgb(59, 89, 59);
+            transition: .3s;
+        }
+    }
+    // 
+    @media (max-width:1024px) {
+        nav {
+            display: none;
+        }
+    }
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+
+    .login-button {
+        background-color: var(--theme-transperant-backgroung-color);
+        border: 1px solid black;
+        @include button;
+        transition: .3s;
+    }
+    
+    .gs-button {
+        margin: 0 0 0 70px;
+        padding: 11px 23px;
+        background-color: var(--theme-transperant-backgroung-color);
+        border: 1px solid var(--theme-black-button-border);
+        border-radius: 999px;
+        @include button;
+        transition: .3s;
+    }
+    button:hover{
+        transform: scale(1.1);
+        background-color: rgb(59, 89, 59);
+        color: white;
+        border: none;
+    }
+
+    @media (max-width:1024px) {
+        display: none;
+    }
+}
+
+.header-menubutton {
+    display: none;
+
+    @media (max-width:1024px) {
+        display: block;
+    }
+}

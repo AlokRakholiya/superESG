@@ -1,0 +1,57 @@
+@mixin font12 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@mixin font14 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@mixin font15 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@mixin font16 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@mixin font18 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@mixin font20 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@mixin font24 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+@mixin font28 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+@mixin font32 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+@mixin font48 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+@mixin button {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 0 70px;
+    padding: 11px 23px;
+    border-radius: 40px;
+}

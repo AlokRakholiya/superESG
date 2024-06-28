@@ -1,0 +1,134 @@
+@import '../../../scss/main.scss';
+
+.featured {
+    padding: 150px 0 140px 0;
+
+    @media (max-width:576px) {
+        padding-top: 60px;
+    }
+}
+
+.featured-tab {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--theme-black-border);
+}
+
+.featured-tab-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    text-align: center;
+
+    span {
+        padding: 0 0 12px;
+        margin: 0 40px 0 0;
+        @include font16;
+        color: var(--theme-grey-text-paragraph);
+        cursor: pointer;
+    }
+    span:hover {
+        color:rgb(59, 89, 59);
+        transition: .3s;
+    }
+
+    span:hover {
+        color: var(--theme-blue-text-color);
+        border-bottom: 2px solid var(--theme-blue-text-color);
+    }
+
+    @media (max-width:768px) {
+        span {
+            @include font14;
+        }
+    }
+
+    @media (max-width:576px) {
+        gap: 5px;
+
+        span {
+            @include font14;
+            margin: 0 10px 0 0;
+        }
+    }
+}
+
+.featured-grid {
+    margin: 40px 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    position: relative;
+    overflow-x: auto;
+}
+
+.featured-grid-item {
+    width: 277px;
+    height: 392px;
+
+    .featured-grid-item-image {
+        img {
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            transition: .3s;
+        }
+    }
+    .featured-grid-item-data {
+        position: absolute;
+        bottom: 0;
+
+        .featured-grid-item-data-box {
+            width: 90%;
+            padding: 20px 9px 20px 20px;
+            width: 100%;
+
+            p {
+                width: 220px;
+                display: block;
+                margin: 0 0 24px;
+                @include font18;
+                color: var(--theme-white-text-color);
+            }
+
+            button {
+                width: 250px;
+                display: flex;
+                align-items: center;
+                padding: 8px;
+                background-color: rgba(0, 0, 0, .4);
+                backdrop-filter: blur(5px);
+                border: none;
+                border-radius: 9999px;
+                color: var(--theme-white-text-color);
+                width: 230px;
+                @include font16;
+                transition: .3s;
+
+                .black-circle {
+                    width: 40px;
+                    height: 40px;
+                    background-color: var(--theme-black-text-color);
+                    border-radius: 50%;
+                    margin: 0 10px 0 0;
+                     img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        
+                    }
+
+                }
+            }
+
+            button:hover {
+                transform: scale(1.1);
+                background-color: rgb(59, 89, 59);
+                color: white;
+                border: none;
+            }
+        }
+    }
+
+
+}
